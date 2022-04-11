@@ -19,8 +19,13 @@ public class PasswordUtilTest {
         assertTrue(passwordUtils.isStrongPassword("Password123"));
     }
     @Test
+    public void capitalLetters(){
+        assertFalse(passwordUtils.isStrongPassword("password123"));
+        assertTrue(passwordUtils.isStrongPassword("Password123"));
+    }
+    @Test
     public void elevenSymbols(){
-        assertFalse(passwordUtils.isStrongPassword(",."));
+        assertFalse(passwordUtils.isStrongPassword("Password"));
         assertTrue(passwordUtils.isStrongPassword("Password123"));
     }
 }

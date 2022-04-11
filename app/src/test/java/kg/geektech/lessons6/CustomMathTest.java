@@ -27,6 +27,19 @@ public class CustomMathTest {
         System.out.println("simpleAddCase");
     }
     @Test
+    public void simpleSubCase(){
+        assertEquals("5",math.sub(20,15));
+        System.out.println("simpleSubCase");
+    }
+    @Test
+    public void simpleMultCase(){
+        assertEquals("10",math.multiply(2,5));
+    }
+    @Test
+    public  void simpleDivCase(){
+        assertEquals("10",math.div(20,2));
+    }
+    @Test
     public void divByZero(){
         assertEquals("нельзя делить на ноль",math.div(4,0));
         System.out.println("divByZero");
